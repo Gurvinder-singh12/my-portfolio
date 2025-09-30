@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import project1 from "../../assets/projects.png";
-import project3 from "../../assets/projects.png";
-import project2 from "../../assets/projects.png";
+import project2 from "../../assets/project2.jpg";
 import  Marquee  from "react-fast-marquee";
 import { FaCss3, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
 import{SiBootstrap, SiJavascript, SiPostman, SiRedux} from "react-icons/si"
@@ -18,35 +17,18 @@ const Projects = () => {
       code: "https://github.com/demo1",
     },
     {
-      id: 2,
-      title: "E-Commerce Store",
-      img: project2,
-      desc: "Fully functional e-commerce web app with product cart & checkout.",
-      demo: "https://demo2.com",
-      code: "https://github.com/demo2",
-    },
-    {
       id: 3,
       title: "Portfolio Website",
-      img: project3,
-      desc: "Personal portfolio with animations and parallax scrolling.",
-      demo: "https://demo3.com",
-      code: "https://github.com/demo3",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      img: project3,
-      desc: "Personal portfolio with animations and parallax scrolling.",
-      demo: "https://demo3.com",
-      code: "https://github.com/demo3",
+      img: project2,
+      desc: "A personal portfolio website built with ReactJS. It includes smooth scrolling navigation, animated sections using Lottie, a resume preview, projects showcase with demo/code links, and a working contact form powered by EmailJS.",
+      code: "https://github.com/Gurvinder-singh12/my-portfolio.git",
     },
   ];
 
   return (
     //  <div className="project-section ">
     <div className="project-container">
-      <Marquee className="skill-icons" pauseOnHover={true} delay={0} speed={60}>
+      <Marquee className="skill-icons" pauseOnHover={true} delay={0} speed={75}>
         <FaHtml5  color="#E34F26" />
         <FaCss3  color="#1572B6" />
         <SiBootstrap color="rgb(117, 50, 250)"/>

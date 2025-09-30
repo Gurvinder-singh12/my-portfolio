@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+// import emailjs from "emailjs/browser";
+import emailjs from "@emailjs/browser"
+
 const Contact = () => {
   const [formdata, SetFormData] = useState({
     username: "",
     email: "",
     message: "",
   });
-
 let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   const handleChange = (e) => {
@@ -26,17 +28,26 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       toast.error("Please Enter Valid Email");
       return;
     }
-    toast.success("Thank You");
-    console.log(formdata);
-    SetFormData({
-      username: "",
-      email: "",
-      message: "",
-    });
+    emailjs
+    .send(
+      "portfolio-emails",
+      "template_umxt8pg",
+      formdata,
+      "QuI9cWbvUDeg9LULJ",
+    )
+    .then((result)=>{
+      toast.success("Form submitted successfully");
+      console.log(formdata);
+      SetFormData({username: "",email: "",message: "",})
+    },
+    (error)=>{
+      toast.error("Try again!");
+      console.log(error.text)
+    }
+  );
   };
   return (
     <div className="form-container">
-     <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="contact"/>
       <label>
         Name
@@ -67,8 +78,7 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
           rows="5"
         ></textarea>
       </label>
-      <button type="submit">Submit</button>
-      </form>
+      <button onClick={handleSubmit} >Submit</button>
     </div>
   );
 };
