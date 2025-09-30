@@ -27,6 +27,17 @@ nav {
     width: 100%;
     display: flex;
     background-color:rgb(20, 20, 20);
+    animation: slideTop 1s ease-in forwards;
+    opacity: 0;
+}
+@keyframes slideTop {
+  from{
+    transform: translateY(-40%);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .nav-links {
     display: flex;
@@ -68,10 +79,51 @@ nav {
     height: fit-content;
     cursor: default;
     margin-top: 40px;
+     animation: slideLeft 1s forwards;
+     animation-delay: 0.6s;
+     opacity: 0;
 }
 .info-text h1{
     font-weight: 280;
     cursor: default;
+}
+@keyframes slideLeft {
+  from{
+    transform: translateX(-30%);
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.img-animation
+{
+ animation: slideRight 1s forwards;
+ animation-delay: 0.6s;
+     opacity: 0;
+}
+@keyframes slideRight {
+  from{
+    transform: translateX(30%);
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.lottieWave{
+   animation: slideBottom 1s forwards;
+ animation-delay: 0.6s;
+     opacity: 0;
+}
+@keyframes slideBottom {
+  from{
+    transform: translateY(30%);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .profileImg {
     height: 226px;
@@ -349,16 +401,22 @@ label {
     padding: 5rem;
   }
   .info-text {
-    margin: 16px 0;
+    margin: 20px 0;
+    width: 24rem;
   }
   .info-text h1 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .info-text p{
+    /* font-size: 20px; */
+    font-weight: 450;
+    /* margin: 15px; */
   }
   .profileImg {
     height: 204px;
     width: 203px;
-    margin: 46px auto 0;
+    margin: 4rem auto 0;
   }
 
   /* Resume */

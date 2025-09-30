@@ -4,6 +4,7 @@ import waves from "../assets/svg/waves.json";
 import ww from "../assets/contact Green.json";
 import waveSecond from "../assets/Waves.json";
 import waveThird from "../assets/svg/Green wave.json";
+import waveBG from "../assets/svg/Moving bubbles.json";
 import myCV from "../assets/GurvinderSingh_cv.pdf";
 import Contact from "./pages/Contact";
 import logo from "../assets/logo.png";
@@ -41,14 +42,16 @@ const Home = () => {
 
       {/* Info section with picture */}
       <section ref={infoRef} className="info-section">
-        <div style={{ display: "flex" }}>
+        <Lottie className="lottieWave" style={{zIndex:"-1", position:"absolute"}} animationData={waveBG} />
+        {/* <div style={{ display: "flex" }}> */}
           <div className="info-text">
             <h1>MY NAME IS GURVINDER SINGH</h1>
             <p>FRONTEND REACT DEVELOPER</p>
             <p>Rupnagar,Punjab</p>
           </div>
-        </div>
-        <div className="profileImg"></div>
+        {/* </div> */}
+        <div className="img-animation">
+        <div className="profileImg"></div></div>
       </section>
       <Lottie className="lottieWave" animationData={waves} />
 

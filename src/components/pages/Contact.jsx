@@ -36,6 +36,8 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   };
   return (
     <div className="form-container">
+     <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="contact"/>
       <label>
         Name
         <input
@@ -65,7 +67,8 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
           rows="5"
         ></textarea>
       </label>
-      <button onClick={handleSubmit}>Submit</button>
+      <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
