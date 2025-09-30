@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import waves from "../assets/svg/waves.json";
 import ww from "../assets/contact Green.json";
 import waveSecond from "../assets/Waves.json";
+import waveThird from "../assets/svg/Green wave.json";
 import myCV from "../assets/GurvinderSingh_cv.pdf";
 import Contact from "./pages/Contact";
 import logo from "../assets/logo.png";
@@ -67,13 +68,14 @@ const Home = () => {
           <iframe src={myCV} width="100%" height="100%" />
         </div>
       </section>
+      <Lottie className="lottieWave" animationData={waveSecond} />
       {/* Projects Section */}
       <section ref={projectsRef} className="project-section">
         <Projects />
       </section>
       {/* Contact Section */}
+      <Lottie className="lottieWave" style={{width:"100%", margin:"2rem"}} animationData={waveThird} />
       <section ref={contactRef} className="contact-section">
-      <Lottie className="lottieWave" animationData={waveSecond} />
         <Lottie className="form-bg" animationData={ww} />
         <Contact />
       </section>
