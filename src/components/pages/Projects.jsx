@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import project1 from "../../assets/projects.png";
+import project1 from "../../assets/restaurant.jpg";
 import project2 from "../../assets/project2.jpg";
 import  Marquee  from "react-fast-marquee";
 import { FaCss3, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
@@ -12,9 +12,9 @@ const Projects = () => {
       id: 1,
       title: "Restaurant Website",
       img: project1,
-      desc: "A responsive restaurant website built using React and Bootstrap. three pages home menu and team and also a option to book a table. on menu page show different dishes .this page all data come from a json file ",
-      demo: "https://demo1.com",
-      code: "https://github.com/demo1",
+      desc: "A React.js web app using Redux Toolkit and React-Bootstrap , featuring a dynamic menu, special dishes, interactive cart with quantity management, and table booking. Showcases state management, component-based architecture.(designed for PC screens)",
+      demo: "https://apna-restaurant.netlify.app",
+      code: "https://github.com/Gurvinder-singh12/restaurant-website",
     },
     {
       id: 3,

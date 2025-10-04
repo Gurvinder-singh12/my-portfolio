@@ -194,7 +194,7 @@ nav {
 }
 
 .project-text p {
-  font-size: clamp(28px, 3vw, 16px);
+  font-size: clamp(23px, 3vw, 16px);
 }
 
 .project-image-container {
