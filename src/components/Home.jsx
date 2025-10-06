@@ -20,7 +20,7 @@ const Home = () => {
   const handleScroll = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-  return (
+  return (  
     <div className="homePage ">
       <nav className="sticky-top">
         <img

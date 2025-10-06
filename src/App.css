@@ -1,11 +1,13 @@
 *{
     font-family:cursive,Courier New, Courier, monospace;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
+html, body{
+  width: 100%;  
   overflow-x: hidden;
+scroll-behavior: smooth;
 }
 
 .logo {
@@ -559,10 +561,14 @@ label {
     transition: right 0.3s ease;
     padding: 1rem;
     z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .nav-links.open {
     right: 0;
+    opacity: 1;
+    pointer-events: all;
   }
 }
 /* @media (min-width:769px) and (max-width:1024px) {
