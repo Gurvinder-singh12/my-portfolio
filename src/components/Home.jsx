@@ -5,7 +5,7 @@ import ww from "../assets/contact Green.json";
 import waveSecond from "../assets/Waves.json";
 import waveThird from "../assets/svg/Green wave.json";
 import waveBG from "../assets/svg/Moving bubbles.json";
-import myCV from "../assets/GurvinderSingh_cv.pdf";
+// import myCV from "../assets/GurvinderSingh_cv.pdf";
 import Contact from "./pages/Contact";
 import logo from "../assets/logo.png";
 import Projects from "./pages/Projects";
@@ -56,21 +56,46 @@ const Home = () => {
       <Lottie className="lottieWave" animationData={waves} />
 
       {/* about or resume section */}
-      <section ref={aboutRef} className="resume-section">
-        <div className="resume-text">
-          <h2>ABOUT ME</h2>
-          <p className="about-text">
-            Hello! I am a Front End React developer. Currently building a strong
-            and growing skill set in HTML5, CSS3, JavaScript, Redux, React.I am
-            dedicated to continuous learning and staying up-to-date with the
-            latest trends and best coding practices.Let's connect and discuss
-            how I can contribute to your web development team!
-          </p>
-        </div>
-        <div className="my-resume">
-          <iframe src={myCV} width="100%" height="100%" />
-        </div>
-      </section>
+     <section ref={aboutRef} className="resume-section">
+  <div className="about-container">
+    {/* Left: About Me */}
+    <div className="about-text-box">
+      <h2>ABOUT ME</h2>
+      <p>
+        Hello! I am a Front End React Developer. Currently building a strong and growing skill set in 
+        HTML5, CSS3, JavaScript, Redux, and React. I am dedicated to continuous learning and staying 
+        up-to-date with the latest trends and best coding practices. Let's connect and discuss how 
+        I can contribute to your web development team!
+      </p>
+    </div>
+
+    {/* Right: Resume */}
+    <div className="resume-box">
+      <h2>My Resume</h2>
+      <p>You can view my resume online or download it directly.</p>
+
+      <div className="resume-buttons">
+        <a
+          href="/GurvinderSingh_cv.pdf"
+          download="Gurvinder_Singh_Resume.pdf"
+          className="download-btn"
+        >
+          Download Resume
+        </a>
+
+        <a
+          href="https://docs.google.com/gview?embedded=true&url=https://gurvinder-portfolio.netlify.app/GurvinderSingh_cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="view-btn"
+        >
+          View Online
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
       <Lottie className="lottieWave" animationData={waveSecond} />
       {/* Projects Section */}
       <section ref={projectsRef} className="project-section">
