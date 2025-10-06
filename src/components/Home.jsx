@@ -65,7 +65,7 @@ const Home = () => {
         <div className="about-container">
           {/* Left: About Me */}
           <div className="about-text-box">
-            <h2>ABOUT ME</h2>
+            <h2 className="about-headline">ABOUT ME</h2>
             <p>
               Hello! I am a Front End React Developer. Currently building a
               strong and growing skill set in HTML5, CSS3, JavaScript, Redux,
@@ -78,7 +78,7 @@ const Home = () => {
 
           {/* Right: Resume */}
           <div className="resume-box">
-            <h2>My Resume</h2>
+            <h2 >My Resume</h2>
             <p>You can view my resume online or download it directly.</p>
 
             <div className="resume-buttons">
