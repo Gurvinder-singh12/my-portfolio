@@ -20,7 +20,7 @@ const Home = () => {
   const handleScroll = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-  return (  
+  return (
     <div className="homePage ">
       <nav className="sticky-top">
         <img
@@ -42,59 +42,66 @@ const Home = () => {
 
       {/* Info section with picture */}
       <section ref={infoRef} className="info-section">
-        <Lottie className="lottieWave" style={{zIndex:"-1", position:"absolute"}} animationData={waveBG} />
+        <Lottie
+          className="lottieWave"
+          style={{ zIndex: "-1", position: "absolute" }}
+          animationData={waveBG}
+        />
         {/* <div style={{ display: "flex" }}> */}
-          <div className="info-text">
-            <h1>MY NAME IS GURVINDER SINGH</h1>
-            <p>FRONTEND REACT DEVELOPER</p>
-            <p>Rupnagar,Punjab</p>
-          </div>
+        <div className="info-text">
+          <h1>MY NAME IS GURVINDER SINGH</h1>
+          <p>FRONTEND REACT DEVELOPER</p>
+          <p>Rupnagar,Punjab</p>
+        </div>
         {/* </div> */}
         <div className="img-animation">
-        <div className="profileImg"></div></div>
+          <div className="profileImg"></div>
+        </div>
       </section>
       <Lottie className="lottieWave" animationData={waves} />
 
       {/* about or resume section */}
-     <section ref={aboutRef} className="resume-section">
-  <div className="about-container">
-    {/* Left: About Me */}
-    <div className="about-text-box">
-      <h2>ABOUT ME</h2>
-      <p>
-        Hello! I am a Front End React Developer. Currently building a strong and growing skill set in 
-        HTML5, CSS3, JavaScript, Redux, and React. I am dedicated to continuous learning and staying 
-        up-to-date with the latest trends and best coding practices. Let's connect and discuss how 
-        I can contribute to your web development team!
-      </p>
-    </div>
+      <section ref={aboutRef} className="resume-section">
+        <div className="about-container">
+          {/* Left: About Me */}
+          <div className="about-text-box">
+            <h2>ABOUT ME</h2>
+            <p>
+              Hello! I am a Front End React Developer. Currently building a
+              strong and growing skill set in HTML5, CSS3, JavaScript, Redux,
+              and React. I am dedicated to continuous learning and staying
+              up-to-date with the latest trends and best coding practices. Let's
+              connect and discuss how I can contribute to your web development
+              team!
+            </p>
+          </div>
 
-    {/* Right: Resume */}
-    <div className="resume-box">
-      <h2>My Resume</h2>
-      <p>You can view my resume online or download it directly.</p>
+          {/* Right: Resume */}
+          <div className="resume-box">
+            <h2>My Resume</h2>
+            <p>You can view my resume online or download it directly.</p>
 
-      <div className="resume-buttons">
-        <a
-          href="/GurvinderSingh_cv.pdf"
-          download="Gurvinder_Singh_Resume.pdf"
-          className="download-btn"
-        >
-          Download Resume
-        </a>
+            <div className="resume-buttons">
+              <a
+                href="/GurvinderSingh_cv.pdf"
+                download="Gurvinder_Singh_Resume.pdf"
+                className="download-btn"
+              >
+                Download Resume
+              </a>
 
-        <a
-          href="https://docs.google.com/gview?embedded=true&url=https://gurvinder-portfolio.netlify.app/GurvinderSingh_cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="view-btn"
-        >
-          View Online
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+              <a    
+                href="https://docs.google.com/gview?embedded=true&url=https://gurvinder-portfolio.netlify.app/GurvinderSingh_cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="view-btn"
+              >
+                View Online
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Lottie className="lottieWave" animationData={waveSecond} />
       {/* Projects Section */}
@@ -102,7 +109,11 @@ const Home = () => {
         <Projects />
       </section>
       {/* Contact Section */}
-      <Lottie className="lottieWave" style={{width:"100%", margin:"2rem"}} animationData={waveThird} />
+      <Lottie
+        className="lottieWave"
+        style={{ width: "100%", margin: "2rem" }}
+        animationData={waveThird}
+      />
       <section ref={contactRef} className="contact-section">
         <Lottie className="form-bg" animationData={ww} />
         <Contact />
