@@ -26,9 +26,10 @@ const Projects = () => {
   ];
 
   return (
-    //  <div className="project-section ">
+     <div className="">
+      <h1 style={{display:"flex", margin:"auto", alignItems:"center"}}>Projects</h1>
     <div className="project-container">
-      <Marquee className="skill-icons" pauseOnHover={true} delay={0} speed={75}>
+      {/* <Marquee className="skill-icons" pauseOnHover={true} delay={0} speed={75}>
         <FaHtml5  color="#E34F26" />
         <FaCss3  color="#1572B6" />
         <SiBootstrap color="rgb(117, 50, 250)"/>
@@ -37,7 +38,7 @@ const Projects = () => {
         <SiRedux  color="#764ABC" />
         <FaGithub />
         <SiPostman color="rgb(255, 109, 56)" />
-      </Marquee>
+      </Marquee> */}
       {/* Left Section */}
       <div className="project-text">
         <h2>{projects[activeIndex].title}</h2>
