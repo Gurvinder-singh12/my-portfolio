@@ -6,7 +6,7 @@ import waveBG from "../assets/svg/Moving bubbles.json";
 import Contact from "./pages/Contact";
 import logo from "../assets/logo.png";
 import Projects from "./pages/Projects";
-import { FaCss3, FaGithub, FaDownload, FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3, FaGithub, FaDownload, FaHtml5, FaReact, FaArrowDown } from "react-icons/fa";
 import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
 
 const Home = () => {
@@ -70,42 +70,23 @@ const Home = () => {
         style={{ width: "100%", margin: "2rem" }}
       />
 
-      {/* <section ref={aboutRef} className="resume-section">
-        <h1 className="about-headline" style={{display:"grid" ,justifyContent:"center", marginBottom:"2rem", }}>ABOUT ME</h1>
-        <div className="about-container"
-        style={{ display:"flex" , justifyContent:"space-around"}}
-        >
-          <div className="about-text-box" >
-            <p style={{fontSize:"x-large"}}>
-              Hello! I am a Front End React Developer. Currently building a
-              strong and growing skill set in HTML5, CSS3, JavaScript, Redux,
-              and React. I am dedicated to continuous learning and staying
-              up-to-date with the latest trends and best coding practices. Let's
-              connect and discuss how I can contribute to your web development
-              team!
-            </p>
-          </div>
-
-            <div className="resume-buttons">
-              <a
-                href="/GurvinderSingh_cv.pdf"
-                download="Gurvinder_Singh_Resume.pdf"
-                className="download-btn"
-              >
-                Download Resume
-              </a>
-
-              <a    
-                href="https://docs.google.com/gview?embedded=true&url=https://gurvinder-portfolio.netlify.app/GurvinderSingh_cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="view-btn"
-              >
-                View Online
-              </a>
-            </div>
+   <section className="text-center w-auto">
+    <h2 className="section-title">About Me</h2>
+    <div className="aboutMe text-2xl" >
+      <p>I'm Gurvinder Singh, a passionate Frontend Developer specializing in ReactJS.<br/>
+        i enjoy creating responsive,user-friendly web interfaces and exploring new tools
+        like Redux-Toolkit and Tailwind CSS. <br/>
+        My aim to deliver clean, efficient and visually appealing web experiences. 
+        </p>
+        <div className="flex justify-center font-bold">
+          {/* <span> */}
+        <span className="scrollDown">Scroll down
+          <p className="mx-5" ><FaArrowDown size={18} /></p>
+          </span>
+          {/* </span> */}
         </div>
-      </section> */}
+    </div>
+    </section> 
 
       <section ref={skillsRef} className="text-center">
         <h2 className="section-title">My Skills</h2>

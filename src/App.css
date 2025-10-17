@@ -144,6 +144,15 @@ nav {
         box-shadow: 0px 2px 3px black;
     }
 }
+.scrollDown{
+     animation: floatScroll infinite 2s ease-in;
+}
+@keyframes floatScroll {
+    50% {
+        transform: translateY(-7px);
+        /* box-shadow: 0px 2px 3px black; */
+    }
+}
 /* tailwindcss reume nd about */
 /* .resume-section {
   padding: 4rem 2rem;
