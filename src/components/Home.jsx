@@ -11,6 +11,7 @@ import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
 
 const Home = () => {
   const infoRef = useRef();
+  const aboutRef =useRef();
   const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
@@ -33,6 +34,8 @@ const Home = () => {
           <span></span>
         </div>
         <ul className={isOpen ? "nav-links open" : "nav-links"}>
+          <li onClick={() => handleScroll(infoRef)}>HOME</li>
+          <li onClick={() => handleScroll(aboutRef)}>ABOUT</li>
           <li onClick={() => handleScroll(skillsRef)}>SKILLS</li>
           <li onClick={() => handleScroll(projectsRef)}>PROJECTS</li>
           <li onClick={() => handleScroll(contactRef)}>CONTACT</li>
@@ -70,7 +73,7 @@ const Home = () => {
         style={{ width: "100%", margin: "2rem" }}
       />
 
-   <section className="text-center w-auto">
+   <section ref={aboutRef} className="text-center w-auto">
     <h2 className="section-title">About Me</h2>
     <div className="aboutMe text-2xl" >
       <p>I'm Gurvinder Singh, a passionate Frontend Developer specializing in ReactJS.<br/>
