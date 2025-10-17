@@ -222,26 +222,7 @@ nav {
 .about-text-box{
   width: 50%;
 }
-/* .resume-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  height: fit-content;
-} */
 
-/* .download-btn{
-  padding: 4px 3px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-  text-decoration: none;
-   background-color: #2563eb;
-} */
-
-/* .download-btn:hover {
-  background-color: #1d4ed8;
-} */
 /* project section */
 .project-container {
   display: flex;
@@ -259,10 +240,7 @@ nav {
 }
 
 .project-text h2 {
-  /* font-size: clamp(42px, 2.5vw, 70px); */
   margin-bottom: 10px;
-  /* text-align: center; */
-  /* background-color: blueviolet; */
 }
 
 .project-text p {
@@ -303,8 +281,8 @@ nav {
 }
 
 .overlay-buttons a:hover {
-  /* background: black; */
-  box-shadow: 0px 10px 25px 10px rgb(151, 8, 233);
+  background: rgb(151, 8, 233);
+  /* box-shadow: 0px 10px 25px 10px rgb(151, 8, 233); */
 }
 
 /* project section Navigation */
@@ -336,18 +314,10 @@ nav {
 }
 
 .project-nav button:hover {
-  /* background: #340985; */
-  box-shadow: 0px 8px 22px 10px rgb(151, 8, 233);
+  background: rgb(151, 8, 233);
+  /* box-shadow: 0px 8px 22px 10px rgb(151, 8, 233); */
 }
 
-/* contact section  */
-/* .contact-section {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
 .contact-section,
 label {
     display: flex;
@@ -394,14 +364,7 @@ label {
     /* margin-top: 5rem; */
     margin-bottom: 2rem;
 }
-/* .form-bg{
-    position: absolute;
-    transform: scale(1.4);
-    height: 100%;
-    width: 42%;
-    z-index: -1;
-    margin-top: 19rem;
-} */
+
 /* left side social icons */
 .social-icons {
   position: fixed;
@@ -425,14 +388,10 @@ label {
   cursor: pointer;
 }
 .skill-icons{
-
   font-size: 5rem;
 /* width: 100%; */
-/* margin: 0px 20px; */
 }
-/* .project-container Marquee{
-  margin: 0px 20px;
-} */
+
 
 
 .footer-section{
@@ -502,24 +461,7 @@ textarea {
      margin: 2px;
      padding-top: 2px;
   }
-/* .about-container{
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-}
-.resume-box h2 ,
-.resume-box p{
-display: none;
-}
-.about-text-box{
-  width: 100%;
-} */
-/* project section */
-/* .project-section{
-  flex-direction: column;
-} */
+
 .project-image-container{
   /* flex-direction: column; */
   /* align-items: center; */
@@ -541,13 +483,7 @@ display: none;
   /* display: flex; */
   gap: 4rem;
 }
-/* .project-text {
-    margin: 10px 0;
-  } */
-  /* .project h1 {
-    font-size: 26px;
-    font-weight: 300;
-  } */
+
   /* Contact Form */
   .contact-section {
     width: 100%;

@@ -17,10 +17,10 @@ const Projects = () => {
       code: "https://github.com/Gurvinder-singh12/restaurant-website",
     },
     {
-      id: 3,
+      id: 2,
       title: "Portfolio Website",
       img: project2,
-      desc: "A personal portfolio website built with ReactJS. It includes smooth scrolling navigation, animated sections using Lottie, a resume preview, projects showcase with demo/code links, and a working contact form powered by EmailJS.",
+      desc: "A responsive ReactJS portfolio website showcasing my skills and projects with a modern UI and smooth navigation",
       code: "https://github.com/Gurvinder-singh12/my-portfolio.git",
     },
   ];
@@ -35,6 +35,7 @@ const Projects = () => {
         <div className="project-text">
           <h2>{projects[activeIndex].title}</h2>
           <p>{projects[activeIndex].desc}</p>
+          
             <div className="flex flex-wrap gap-2 justify-center">
                 <span className=" text-sm px-2  py-1 bg-blue-200   rounded-full">ReactJS</span>
                 <span className=" text-sm px-3 py-1 bg-blue-200  rounded-full">React Router</span>
