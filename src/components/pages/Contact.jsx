@@ -46,7 +46,10 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     }
   );
   };
-  return (
+  return (<>
+  <div className="my-1">
+      <h2 >Let’s Connect!</h2>
+      </div>
     <div className="form-container">
       <input type="hidden" name="form-name" value="contact"/>
       <label>
@@ -80,6 +83,7 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       </label>
       <button onClick={handleSubmit} >Submit</button>
     </div>
+    </>
   );
 };
 
