@@ -9,7 +9,7 @@ function App() {
       <Home />
       <SocialLinks />
       <Footer />
-      <ToastContainer/>
+      <ToastContainer  autoClose={2500}/>
     </>
   );
 }

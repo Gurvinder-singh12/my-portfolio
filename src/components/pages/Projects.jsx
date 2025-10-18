@@ -1,9 +1,5 @@
-import React, { useState } from "react";
-import project1 from "../../assets/restaurant.jpg";
-import project2 from "../../assets/project2.jpg";
-import Marquee from "react-fast-marquee";
-import { FaCss3, FaGithub, FaHtml5, FaReact } from "react-icons/fa";
-import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
+import { useState } from "react";
+import projects from "../../ProjectsData.json";
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -13,25 +9,6 @@ const Projects = () => {
   const handleNext = () => {
     setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
-  const projects = [
-    {
-      id: 1,
-      title: "Restaurant Website",
-      img: project1,
-      desc: "A React.js restaurant website using Redux Toolkit with a dynamic menu, cart, and table booking.",
-      tools: "ReactJS,React-Router,Redux-Toolkit,TailwindCSS",
-      demo: "https://apna-restaurant.netlify.app",
-      code: "https://github.com/Gurvinder-singh12/restaurant-website",
-    },
-    {
-      id: 2,
-      title: "Portfolio Website",
-      img: project2,
-      desc: "A responsive ReactJS portfolio website showcasing my skills and projects with a modern UI and smooth navigation",
-      tools: "ReactJS,CSS,EmailJS,React-Toast,TailwindCSS",
-      code: "https://github.com/Gurvinder-singh12/my-portfolio.git",
-    },
-  ];
 
   return (
     <div className="projects">
