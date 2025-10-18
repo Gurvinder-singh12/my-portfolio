@@ -37,12 +37,10 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     )
     .then((result)=>{
       toast.success("Form submitted successfully");
-      console.log(formdata);
       SetFormData({username: "",email: "",message: "",})
     },
     (error)=>{
       toast.error("Try again!");
-      console.log(error.text)
     }
   );
   };
@@ -51,7 +49,7 @@ let validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       <h2 >Let’s Connect!</h2>
       </div>
     <div className="form-container">
-      <input type="hidden" name="form-name" value="contact"/>
+      {/* <input type="hidden" name="form-name" value="contact"/> */}
       <label>
         Name
         <input

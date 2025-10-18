@@ -11,7 +11,6 @@ import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
 
 const Home = () => {
   const infoRef = useRef();
-  // const aboutRef =useRef();
   const skillsRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
@@ -35,7 +34,6 @@ const Home = () => {
         </div>
         <ul className={isOpen ? "nav-links open" : "nav-links"}>
           <li onClick={() => handleScroll(infoRef)}>HOME</li>
-          {/* <li onClick={() => handleScroll(aboutRef)}>ABOUT</li> */}
           <li onClick={() => handleScroll(skillsRef)}>SKILLS</li>
           <li onClick={() => handleScroll(projectsRef)}>PROJECTS</li>
           <li onClick={() => handleScroll(contactRef)}>CONTACT</li>
@@ -72,42 +70,10 @@ const Home = () => {
         animationData={waves}
         style={{ width: "100%", margin: "2rem" }}
       />
-
-   {/* <section ref={aboutRef} className="text-center w-auto">
-    <h2 className="section-title">About Me</h2>
-    <div className="aboutMe text-xl" >
-      <p>I'm Gurvinder Singh, a passionate Frontend Developer specializing in ReactJS.<br/>
-        i enjoy creating responsive,user-friendly web interfaces and exploring new tools
-        like Redux-Toolkit and Tailwind CSS. <br/>
-        My aim to deliver clean, efficient and visually appealing web experiences. 
-        </p>
-<div className="grid grid-cols-3 gap-1 mt-6 text-center text-sm md:text-base">
-  <div>
-    <h4 className="font-semibold">⚡ Quick Learner</h4>
-    <p>Adapt easily to new tools & tech.</p>
-  </div>
-  <div>
-    <h4 className="font-semibold">🎨 UI Focused</h4>
-    <p>Love crafting clean, modern layouts.</p>
-  </div>
-  <div>
-    <h4 className="font-semibold">🤝 Team Player</h4>
-    <p>Enjoy collaborating & sharing ideas.</p>
-  </div>
-</div>
-        <div className="flex justify-center font-bold">
-        <span className="scrollDown">Scroll down
-          <p className="mx-5" ><FaArrowDown size={18} /></p>
-          </span>    
-        </div>
-    </div>
-    </section>  */}
-
-      <section ref={skillsRef} className="text-center">
+        <section ref={skillsRef} className="text-center">
         <h2 className="section-title">My Skills</h2>
         <div
           className="skill-section flex flex-wrap  justify-center"
-          // style={{ display: "flex", flexWrap: "wrap" }}
         >
           <div className="skill-card">
             <FaHtml5 color="#E34F26" size={50} />
@@ -144,7 +110,6 @@ const Home = () => {
             <p>Postman</p>
           </div>
         </div>
-        {/* </Marquee> */}
       </section>
 
       {/* Projects Section */}
@@ -158,7 +123,6 @@ const Home = () => {
         style={{ width: "100%" }}
       />
       <section ref={contactRef} className="contact-section">
-        {/* <Lottie className="form-bg" animationData={ww} /> */}
         <Lottie
           className="lottieWave"
           style={{ zIndex: "-1", position: "absolute" }}

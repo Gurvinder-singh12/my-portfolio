@@ -7,12 +7,19 @@ import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+  };
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+  };
   const projects = [
     {
       id: 1,
       title: "Restaurant Website",
       img: project1,
       desc: "A React.js restaurant website using Redux Toolkit with a dynamic menu, cart, and table booking.",
+      tools: "ReactJS,React-Router,Redux-Toolkit,TailwindCSS",
       demo: "https://apna-restaurant.netlify.app",
       code: "https://github.com/Gurvinder-singh12/restaurant-website",
     },
@@ -21,27 +28,31 @@ const Projects = () => {
       title: "Portfolio Website",
       img: project2,
       desc: "A responsive ReactJS portfolio website showcasing my skills and projects with a modern UI and smooth navigation",
+      tools: "ReactJS,CSS,EmailJS,React-Toast,TailwindCSS",
       code: "https://github.com/Gurvinder-singh12/my-portfolio.git",
     },
   ];
 
   return (
     <div className="projects">
-      <h1 className="section-title my-3">
-        Projects
-      </h1>
+      <h1 className="section-title my-3">Projects</h1>
       <div className="project-container">
         {/* Left Section */}
         <div className="project-text">
           <h2>{projects[activeIndex].title}</h2>
           <p>{projects[activeIndex].desc}</p>
-          
-            <div className="flex flex-wrap gap-2 justify-center">
-                <span className=" text-sm px-2  py-1 bg-blue-200   rounded-full">ReactJS</span>
-                <span className=" text-sm px-3 py-1 bg-blue-200  rounded-full">React Router</span>
-                <span className="text-sm px-3 py-1 bg-blue-200  rounded-full">Redux Toolkit</span>
-                <span className="text-sm px-3 py-1 bg-blue-200  rounded-full">TailwindCSS</span>
-              </div>
+
+          {/* Tools Section */}
+          <div className="flex flex-wrap gap-2 justify-center">
+            {projects[activeIndex].tools.split(",").map((tool, index) => (
+              <span
+                key={index}
+                className="text-sm px-3 py-1 bg-gray-950 text-white rounded-full"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Right Section */}
@@ -56,14 +67,14 @@ const Projects = () => {
             <a
               href={projects[activeIndex].demo}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               Demo
             </a>
             <a
               href={projects[activeIndex].code}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               Code
             </a>
@@ -72,15 +83,7 @@ const Projects = () => {
 
         {/* Navigation */}
         <div className="project-nav">
-          <button
-            onClick={() =>
-              setActiveIndex((prev) =>
-                prev === 0 ? projects.length - 1 : prev - 1
-              )
-            }
-          >
-            ⬅ Prev
-          </button>
+          <button onClick={handlePrev}>⬅ Prev</button>
 
           {projects.map((_, index) => (
             <button
@@ -92,15 +95,7 @@ const Projects = () => {
             </button>
           ))}
 
-          <button
-            onClick={() =>
-              setActiveIndex((prev) =>
-                prev === projects.length - 1 ? 0 : prev + 1
-              )
-            }
-          >
-            Next ➡
-          </button>
+          <button onClick={handleNext}>Next ➡</button>
         </div>
       </div>
     </div>
