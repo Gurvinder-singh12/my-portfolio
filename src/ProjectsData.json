@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Portfolio Website",
-      "img": "/Images/project2.jpg",
+      "img": "/Images/portfolioPic.jpg",
       "desc": "A responsive ReactJS portfolio website showcasing my skills and projects with a modern UI and smooth navigation",
       "tools": "ReactJS,CSS,EmailJS,React-Toast,TailwindCSS",
       "code": "https://github.com/Gurvinder-singh12/my-portfolio.git"
