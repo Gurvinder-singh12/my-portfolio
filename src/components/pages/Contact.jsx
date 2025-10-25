@@ -22,7 +22,7 @@ const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     e.preventDefault();
     if (!formdata.username || !formdata.email || !formdata.message) {
       toast.error("Please fill all fields",{
-        toastId:'fill-fields-error'
+        toastId:'fields-error'
       });
       return;
     }
@@ -42,7 +42,7 @@ const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     )
     .then((result)=>{
       toast.success("Form submitted successfully",{
-        toastId:'success-submit'
+        toastId:'success-toast'
       });
       SetFormData({username: "",email: "",message: "",})
     }).catch((error)=>{

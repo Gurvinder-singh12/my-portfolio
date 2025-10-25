@@ -14,7 +14,7 @@ const SocialLinks = () => {
       </a>
 
       <a
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/in/gurvinder-singh-reactjs"
         target="_blank"
         rel="noreferrer"
       >

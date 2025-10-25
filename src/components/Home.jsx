@@ -6,6 +6,7 @@ import waveBG from "../assets/svg/Moving bubbles.json";
 import Contact from "./pages/Contact";
 import logo from "../assets/logo.png";
 import Projects from "./pages/Projects";
+import { toast } from "react-toastify";
 import { FaCss3, FaGithub, FaDownload, FaHtml5, FaReact, FaArrowDown } from "react-icons/fa";
 import { SiBootstrap, SiJavascript, SiPostman, SiRedux } from "react-icons/si";
 
@@ -15,10 +16,25 @@ const Home = () => {
   const projectsRef = useRef();
   const contactRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const[isResumeDownload,setResumeDownload]=useState(false);
 
   const handleScroll = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const handleResume=(e)=>{
+    if(isResumeDownload){
+      e.preventDefault();
+    toast.warning("You've already downloaded the resume!",{
+      toastId:"already-download"
+    });
+    return;
+  }
+   toast.success("Downloading your resume.....",{
+      toastId:"success-toast"
+    });
+    setResumeDownload(true);
+  }
   return (
     <div className="homePage ">
       <nav className="sticky-top">
@@ -55,8 +71,12 @@ const Home = () => {
             <a
               href="/GurvinderSingh_cv.pdf"
               download="Gurvinder_Singh_Resume.pdf"
-              className="items-center inline-flex px-3 py-2 rounded-2xl text-decoration-none bg-gray-950 text-white transition-all duration-200 hover:bg-red-500">
-              <span className="">Resume </span>
+              onClick={handleResume}
+              // disabled={isResumeDownload}
+              className={`items-center inline-flex px-3 py-2 rounded-2xl text-decoration-none text-white transition-all duration-200 ${
+              isResumeDownload?"bg-gray-500 cursor-not-allowed":"bg-gray-950  hover:bg-red-500"}`}>
+              <span className="">
+                {isResumeDownload?"Downloaded":"Resume"}</span>
               <FaDownload className="mx-2 text-sm " />
             </a>
           </div>
